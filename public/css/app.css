@@ -8350,6 +8350,8 @@ button.close {
   }
 }
 
+/* base layout */
+
 body {
   padding-top: 60px;
 }
@@ -8404,5 +8406,24 @@ body {
   font-size: 24px;
   border-top: 2px solid #888;
   padding-top: 20px;
+}
+
+/* sidebar*/
+
+.user_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10px;
 }
 
