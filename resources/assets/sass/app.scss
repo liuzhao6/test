@@ -6,6 +6,18 @@ $navbar-color: #3c3e42;
 /* base layout */
 body {
     padding-top: 60px;
+
+    .yield-con {
+        padding: 70px 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+    #logout {
+        cursor: default;
+        &:hover {
+            background-color: transparent;
+        }
+    }
 }
 .navbar-inverse {
     background-color: $navbar-color;
@@ -28,7 +40,7 @@ body {
     padding-top: 9px;
     font-weight: bold;
     &:hover {
-      color: rgb(165, 99, 99);
+      color: #337ab7;
     }
   }
 
@@ -38,7 +50,6 @@ body {
     align-items: center;
     color:$navbar-color!important;
     font-size: 24px;
-    border-top: 2px solid #888;
     padding-top: 20px;
 }
 /* sidebar*/
@@ -49,3 +60,4 @@ body {
     justify-content: center;
     padding-top: 10px;
 }
+

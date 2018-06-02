@@ -6,4 +6,5 @@
             @endforeach
         </ul>
     </div>
+    <div style="height: 70px;"></div>
 @endif
