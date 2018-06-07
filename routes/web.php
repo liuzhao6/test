@@ -25,3 +25,14 @@ Route::resource('users', 'UsersController');
 Route::get('/login', 'SessionController@create')->name('login');//登录view
 Route::post('/login', 'SessionController@store')->name('login');//登录post请求
 Route::delete('/logout', 'SessionController@destroy')->name('logout');//退出
+
+
+Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
+
+
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+
+Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');

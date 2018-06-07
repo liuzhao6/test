@@ -34,9 +34,12 @@ class SessionController extends Controller
         ]);
 
         if (Auth::attempt($credentials, $request->has('remember'))) {
-            //success
-            session()->flash('success','欢迎回来！');
-            return redirect()->intended(route('users.show', [Auth::User()]));
+
+            if(Auth::user()->activated) {
+                //success
+                session()->flash('success','欢迎回来！');
+                return redirect()->intended(route('users.show', [Auth::User()]));
+            }
         } else {
             //fail
             session()->flash('danger', '很抱歉，您的邮箱与密码不匹配');
