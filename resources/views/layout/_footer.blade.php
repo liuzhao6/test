@@ -1,4 +1,6 @@
+
 <div class="col-md-12">
+    <hr>
     <div class='row'>
     <footer class="footer footer-flex">
         <div>

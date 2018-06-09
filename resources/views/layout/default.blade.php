@@ -19,7 +19,7 @@
 
 </div>
 <div class="container">
-    <hr />
+
 @include('layout/_footer')
 </div>
 </body>
