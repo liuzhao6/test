@@ -39,6 +39,10 @@ class SessionController extends Controller
                 //success
                 session()->flash('success','欢迎回来！');
                 return redirect()->intended(route('users.show', [Auth::User()]));
+            } else {
+                session()->flash('danger','很抱歉，您的账户未激活！');
+                Auth::logout();
+                return redirect('/');
             }
         } else {
             //fail
